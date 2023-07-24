@@ -44,7 +44,16 @@ public class UserController {
 	}
 	
 	@PostMapping("/create")
-	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
+	public ResponseEntity<?> createUser(@RequestBody CreateUserRequest createUserRequest) {
+		String userName = createUserRequest.getUsername();
+		if (userName == null || userName.isEmpty()) {
+			String errorMessage = "The user name can't be null or empty";
+			return ResponseEntity.badRequest().body(errorMessage);
+		}
+		if(userRepository.findByUsername(userName) != null){
+			String errorMessage = "The user name is already used";
+			return ResponseEntity.badRequest().body(errorMessage);
+		}
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
 		Cart cart = new Cart();
@@ -52,7 +61,8 @@ public class UserController {
 		user.setCart(cart);
 		if(createUserRequest.getPassword().length()<7 ||
 				!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
-			return ResponseEntity.badRequest().build();
+			String errorMessage = "Password must be at least 7 characters long and match the confirmation password.";
+			return ResponseEntity.badRequest().body(errorMessage);
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 		userRepository.save(user);
