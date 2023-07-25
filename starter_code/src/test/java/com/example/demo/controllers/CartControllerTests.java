@@ -24,7 +24,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class CartControllerTest {
+public class CartControllerTests {
 
     private CartController cartController;
 
