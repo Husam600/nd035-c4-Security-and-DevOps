@@ -1,0 +1,112 @@
+Started by user Husam Abuhabib
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/eCommerce Application
+The recommended git tool is: NONE
+using credential 19c63f76-18f7-4904-8869-1afbaaa8f74d
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/eCommerce Application/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Husam600/nd035-c4-Security-and-DevOps.git # timeout=10
+Fetching upstream changes from https://github.com/Husam600/nd035-c4-Security-and-DevOps.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/Husam600/nd035-c4-Security-and-DevOps.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision b55a1d059bf6cdbd195e0d7906245afebeaeb394 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b55a1d059bf6cdbd195e0d7906245afebeaeb394 # timeout=10
+Commit message: "Add splunk screenshot"
+ > git rev-list --no-walk b55a1d059bf6cdbd195e0d7906245afebeaeb394 # timeout=10
+[eCommerce Application] $ mvn -f starter_code/pom.xml clean compile package
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for com.example:auth-course:war:0.0.1-SNAPSHOT
+[[1;33mWARNING[m] 'dependencies.dependency.version' for org.junit.jupiter:junit-jupiter:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 70, column 13
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36mcom.example:auth-course[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding auth-course 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ war ]---------------------------------[m
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.1.0/maven-clean-plugin-3.1.0.pom
+Progress (1): 2.7/5.2 kB
+Progress (1): 5.2 kB    
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.1.0/maven-clean-plugin-3.1.0.pom (5.2 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.1.0/maven-clean-plugin-3.1.0.jar
+Progress (1): 2.7/30 kB
+Progress (1): 5.5/30 kB
+Progress (1): 8.2/30 kB
+Progress (1): 11/30 kB 
+Progress (1): 14/30 kB
+Progress (1): 16/30 kB
+Progress (1): 19/30 kB
+Progress (1): 21/30 kB
+Progress (1): 24/30 kB
+Progress (1): 27/30 kB
+Progress (1): 30/30 kB
+Progress (1): 30 kB   
+                   
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.1.0/maven-clean-plugin-3.1.0.jar (30 kB at 535 kB/s)
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Deleting /var/jenkins_home/workspace/eCommerce Application/starter_code/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 20 source files to /var/jenkins_home/workspace/eCommerce Application/starter_code/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 20 source files to /var/jenkins_home/workspace/eCommerce Application/starter_code/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /var/jenkins_home/workspace/eCommerce Application/starter_code/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 6 source files to /var/jenkins_home/workspace/eCommerce Application/starter_code/target/test-classes
+[[1;34mINFO[m] /var/jenkins_home/workspace/eCommerce Application/starter_code/src/test/java/com/example/demo/TestUtils.java: /var/jenkins_home/workspace/eCommerce Application/starter_code/src/test/java/com/example/demo/TestUtils.java uses or overrides a deprecated API.
+[[1;34mINFO[m] /var/jenkins_home/workspace/eCommerce Application/starter_code/src/test/java/com/example/demo/TestUtils.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-war-plugin:3.2.2:war[m [1m(default-war)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Packaging webapp
+[[1;34mINFO[m] Assembling webapp [auth-course] in [/var/jenkins_home/workspace/eCommerce Application/starter_code/target/auth-course-0.0.1-SNAPSHOT]
+[[1;34mINFO[m] Processing war project
+[[1;34mINFO[m] Webapp assembled in [148 msecs]
+[[1;34mINFO[m] Building war: /var/jenkins_home/workspace/eCommerce Application/starter_code/target/auth-course-0.0.1-SNAPSHOT.war
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.1.5.RELEASE:repackage[m [1m(repackage)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Replacing main artifact with repackaged archive
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  7.539 s
+[[1;34mINFO[m] Finished at: 2023-07-25T08:41:58Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+Finished: SUCCESS 
